@@ -22,7 +22,9 @@
     --text-xs: 0.75rem;
     --text-sm: 0.875rem;
     --text-md: 1rem;
-    --text-lg: 3.5rem;
+    --text-mdl: 1.5rem;
+    --text-lg: 2.3rem;
+    --text-xl: 3.5rem;
 
     --space-sm: 0.5rem;
     --space-md: 1rem;
@@ -71,7 +73,9 @@ main {
 
 .flex {
     display: flex;
+    flex-direction: column;
 }
+
 
 .column{
     flex-grow: 1;
@@ -121,7 +125,7 @@ img {
 .right-col p {
     max-width: 65%;
     margin-bottom: 4rem;
-    font-size: 1.5em;
+    font-size: var(--text-md);
 }
 
 .right-col .btn__black {
@@ -145,9 +149,35 @@ img {
 .footer {
     height: 50px;
     text-align: center;
+    font-size: var(--text-sm);
 }
 
 .footer a {
     color: var(--muted);
 }
 
+
+
+
+
+/**
+* media query desktop
+**/
+
+
+@media screen and (min-width: 1024px) {
+    .container {
+      max-width: 1200px;
+    }
+    .flex {
+        display: flex;
+        flex-direction: row;
+    }
+    .right-col h1 {
+        font-size: var(--text-xl);
+    }
+
+    .right-col p {
+        font-size: var(--text-mdl);
+    }
+}
