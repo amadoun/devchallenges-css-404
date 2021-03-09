@@ -1,0 +1,153 @@
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Montserrat:wght@500;700&family=Space+Mono:wght@400;700&display=swap');
+
+/**
+| Reset default styling 
+**/
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/**
+* Variables
+**/
+:root {
+    --white: #fff;
+    --black: #000;
+    --muted: #acaeb1;
+
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-md: 1rem;
+    --text-lg: 3.5rem;
+
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 2rem;
+
+    --rounded-sm: 8px;
+    --rounded: 16px;
+
+    --shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+
+    --debug: 1px solid red;
+}
+
+/**
+* General
+**/
+body, html {
+    font-size: var(--text-md);
+    position: relative;
+}
+
+main {
+    min-height: calc(100vh - 60px);
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.section {
+    padding: 2rem 1rem;
+}
+
+.container {
+    margin: 0 auto;
+    flex-grow: 1;
+    width: auto;
+    position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+.flex {
+    display: flex;
+}
+
+.column{
+    flex-grow: 1;
+    width: 100%;
+}
+
+.is-uppercase {
+    text-transform: uppercase;
+}
+
+.text-muted {
+    color: var(--muted);
+}
+
+/**
+* Header
+**/
+
+
+nav {
+    min-height: 3rem;
+    font-size: 1.5em;
+    font-family: 'Inconsolata', monospace;
+    margin-bottom: 5rem;
+}
+
+/**
+* Left column
+**/
+
+img {
+    width: 100%;
+    height: auto;
+} 
+
+/**
+* Right column
+**/
+.right-col {
+    font-family: 'Space Mono', monospace;
+}
+
+.right-col h1 {
+    font-size: var(--text-lg);
+}
+
+.right-col p {
+    max-width: 65%;
+    margin-bottom: 4rem;
+    font-size: 1.5em;
+}
+
+.right-col .btn__black {
+    background: var(--black);
+    color: var(--white);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: var(--text-xs);
+}
+
+.right-col .btn__black:hover {
+    color: var(--black);
+    border:1px solid var(--black);
+    background: var(--white);
+}
+
+/**
+* Footer
+**/
+.footer {
+    height: 50px;
+    text-align: center;
+}
+
+.footer a {
+    color: var(--muted);
+}
+
